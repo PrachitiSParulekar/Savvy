@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Savvy - Unlock the future of stock</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png" />
+  <!-- Custom Stylesheet -->
+  <script>
+    function displayNextDayValue() {
+      // Replace with your desired next day value
+      const nextDayPrice = 62.41;  // Example hardcoded value
+
+      const innerDiv = document.getElementById("innerdiv");
+      innerDiv.innerHTML = `
+          <h2 style="text-align: center; color: #007bff; font-weight: bold;">
+            &#8377;${nextDayPrice.toFixed(2)}
+          </h2>
+        `;
+    }
+  </script>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+
+  <div id="main-wrapper">
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-12">
+            <div class="header-content">
+              <div class="header-left">
+                <div class="brand-logo">
+                  <a href="index.html">
+                    <img src="./images/logo.png" alt="" />
+                    <span>Savvy</span>
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="header-right">
+                <div class="dark-light-toggle" onclick="themeToggle()">
+                  <span class="dark"><i class="icofont-moon"></i></span>
+                  <span class="light"><i class="icofont-sun-alt"></i></span>
+                </div>
+
+                <div class="dropdown-menu dropdown-menu-right notification-list">
+                  <h4>Announcements</h4>
+                  <div class="lists">
+                    <a href="#" class="">
+                      <div class="d-flex align-items-center">
+                        <span class="me-3 icon success"><i class="icofont-check"></i></span>
+                        <div>
+                          <p>Account created successfully</p>
+                          <span>2020-11-04 12:00:23</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="">
+                      <div class="d-flex align-items-center">
+                        <span class="me-3 icon fail"><i class="icofont-close"></i></span>
+                        <div>
+                          <p>2FA verification failed</p>
+                          <span>2020-11-04 12:00:23</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="">
+                      <div class="d-flex align-items-center">
+                        <span class="me-3 icon success"><i class="icofont-check"></i></span>
+                        <div>
+                          <p>Device confirmation completed</p>
+                          <span>2020-11-04 12:00:23</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="">
+                      <div class="d-flex align-items-center">
+                        <span class="me-3 icon pending"><i class="icofont-warning"></i></span>
+                        <div>
+                          <p>Phone verification pending</p>
+                          <span>2020-11-04 12:00:23</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="./settings-activity.html">More <i class="icofont-simple-right"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile_log dropdown">
+                <div class="user" data-toggle="dropdown">
+                  <span class="thumb"><img src="./images/profile/2.png" alt="" /></span>
+                  <span class="arrow"><i class="icofont-angle-down"></i></span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <div class="user-email">
+                    <div class="user">
+                      <span class="thumb"><img src="./images/profile/2.png" alt="" /></span>
+                      <div class="user-info">
+                        <h5>Jannatul Maowa</h5>
+                        <span>Qash.inc@gmail.com</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-balance">
+                    <div class="available">
+                      <p>Available</p>
+                      <span>0.00 BTC</span>
+                    </div>
+                    <div class="total">
+                      <p>Total</p>
+                      <span>0.00 USD</span>
+                    </div>
+                  </div>
+                  <a href="profile.html" class="dropdown-item">
+                    <i class="icofont-ui-user"></i>Profile
+                  </a>
+                  <a href="wallet.html" class="dropdown-item">
+                    <i class="icofont-wallet"></i>Wallet
+                  </a>
+                  <a href="settings-profile.html" class="dropdown-item">
+                    <i class="icofont-ui-settings"></i> Setting
+                  </a>
+                  <a href="settings-activity.html" class="dropdown-item">
+                    <i class="icofont-history"></i> Activity
+                  </a>
+                  <a href="lock.html" class="dropdown-item">
+                    <i class="icofont-lock"></i>Lock
+                  </a>
+                  <a href="signin.html" class="dropdown-item logout">
+                    <i class="icofont-logout"></i> Logout
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="brand-logo">
+      <a href="index.html"><img src="./images/logo.png" alt="" /> </a>
+    </div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="index.html" data-toggle="tooltip" data-placement="right" title="Home">
+            <span><i class="icofont-ui-home"></i></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="price.html" data-toggle="tooltip" data-placement="right" title="Price">
+            <span><i class="icofont-price"></i></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="news.html" data-toggle="tooltip" data-placement="right" title="NEWS">
+            <span><i class="icofont-news"></i></span>
+          </a>
+        </li>
+        <li class="logout">
+          <a href="signin.html" data-toggle="tooltip" data-placement="right" title="Signout">
+            <span><i class="icofont-power"></i></span>
+          </a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+
+  <div class="content-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12 col-xl-08">
+          <div class="card">
+            <div class="card-body">
+
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+                    target="_blank"></a></div>
+                <script type="text/javascript"
+                  src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                      "symbol": "WMT",
+                        "width": "100%",
+                          "isTransparent": false,
+                            "colorTheme": "light",
+                              "locale": "en"
+                    }
+                  </script>
+              </div>
+              <!-- TradingView Widget END -->
+
+              <div style="height: 600px; overflow: auto">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
+                      rel="noopener nofollow" target="_blank"></a></div>
+                  <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                      {
+                        "width": "1250",
+                          "height": "610",
+                            "symbol": "NYSE:WMT",
+                              "interval": "D",
+                                "timezone": "Etc/UTC",
+                                  "theme": "light",
+                                    "style": "1",
+                                      "locale": "en",
+                                        "enable_publishing": false,
+                                          "save_image": false,
+                                            "calendar": false,
+                                              "hide_volume": true,
+                                                "support_host": "https://www.tradingview.com"
+                      }
+                    </script>
+                </div>
+              </div>
+              <div class="chart-content text-center">
+                <div class="row">
+
+                </div>
+                <div style="padding-top: 20px;"></div>
+                <div class="text-center">
+                  <button id="myButton" type="button" class="btn btn-primary">Predict</button>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="curve_chart"></div>
+
+
+  <div style="padding-top: 10px;"></div>
+  <div class="text-center">
+    <button id="mybutton" onclick="displayNextDayValue()" class="btn btn-primary">Next Day</button>
+    <div id="innerdiv"></div>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+      <title> Savvy - Unlock the future of stock</title>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <!-- Favicon icon -->
+      <link rel="icon" type="image/png" sizes="16x16" href="./images/sicon.png" />
+      <!-- Custom Stylesheet -->
+      <style>
+        .prediction-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+          /* Add some spacing for better readability */
+        }
+
+        .prediction-text {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+
+        .prediction-value {
+          font-size: 1.5rem;
+          color: #333;
+        }
+      </style>
+      <script>
+        function displayNextDayValue() {
+          // Replace with your desired next day value
+          const nextDayPrice = 176.079890;  // Example hardcoded value
+
+          const innerDiv = document.getElementById("innerdiv");
+          innerDiv.innerHTML = `
+        <h2 style="text-align: center; color: #007bff; font-weight: bold;">
+          ${nextDayPrice.toFixed(2)}
+        </h2>
+      `;
+        }
+      </script>
+      <link rel="stylesheet" href="./css/style.css" />
+    </head>
+
+    <body>
+      <div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+
+      <div id="main-wrapper">
+        <div class="header">
+          <div class="container">
+            <div class="row">
+              <div class="col-xxl-12">
+                <div class="header-content">
+                  <div class="header-left">
+                    <div class="brand-logo">
+                      <a href="index.html">
+                        <img src="./images/sicon.png" alt="" />
+                        <span>Savvy</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="header-right">
+                    <div class="dark-light-toggle" onclick="themeToggle()">
+                      <span class="dark"><i class="icofont-moon"></i></span>
+                      <span class="light"><i class="icofont-sun-alt"></i></span>
+                    </div>
+                    <div class="notification dropdown">
+                      <div class="notify-bell" data-toggle="dropdown">
+                        <span><i class="icofont-alarm"></i></span>
+                      </div>
+                      <div class="dropdown-menu dropdown-menu-right notification-list">
+                        <h4>Announcements</h4>
+                        <div class="lists">
+                          <a href="#" class="">
+                            <div class="d-flex align-items-center">
+                              <span class="me-3 icon success"><i class="icofont-check"></i></span>
+                              <div>
+                                <p>Account created successfully</p>
+                                <span>2020-11-04 12:00:23</span>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class="">
+                            <div class="d-flex align-items-center">
+                              <span class="me-3 icon fail"><i class="icofont-close"></i></span>
+                              <div>
+                                <p>2FA verification failed</p>
+                                <span>2020-11-04 12:00:23</span>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class="">
+                            <div class="d-flex align-items-center">
+                              <span class="me-3 icon success"><i class="icofont-check"></i></span>
+                              <div>
+                                <p>Device confirmation completed</p>
+                                <span>2020-11-04 12:00:23</span>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class="">
+                            <div class="d-flex align-items-center">
+                              <span class="me-3 icon pending"><i class="icofont-warning"></i></span>
+                              <div>
+                                <p>Phone verification pending</p>
+                                <span>2020-11-04 12:00:23</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="./settings-activity.html">More <i class="icofont-simple-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="profile_log dropdown">
+                      <div class="user" data-toggle="dropdown">
+                        <span class="thumb"><img src="./images/sicon.png" alt="" /></span>
+                        <span class="arrow"><i class="icofont-angle-down"></i></span>
+                      </div>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <div class="user-email">
+                          <div class="user">
+                            <span class="thumb"><img src="./images/sicon.png" alt="" /></span>
+                            <div class="user-info">
+                              <h5>Jannatul Maow</h5>
+                              <span>Qash.inc@gmail.com</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="user-balance">
+                          <div class="available">
+                            <p>Available</p>
+                            <span>0.00 BTC</span>
+                          </div>
+                          <div class="total">
+                            <p>Total</p>
+                            <span>0.00 USD</span>
+                          </div>
+                        </div>
+                        <a href="profile.html" class="dropdown-item">
+                          <i class="icofont-ui-user"></i>Profile
+                        </a>
+                        <a href="wallet.html" class="dropdown-item">
+                          <i class="icofont-wallet"></i>Wallet
+                        </a>
+                        <a href="settings-profile.html" class="dropdown-item">
+                          <i class="icofont-ui-settings"></i> Setting
+                        </a>
+                        <a href="settings-activity.html" class="dropdown-item">
+                          <i class="icofont-history"></i> Activity
+                        </a>
+                        <a href="lock.html" class="dropdown-item">
+                          <i class="icofont-lock"></i>Lock
+                        </a>
+                        <a href="signin.html" class="dropdown-item logout">
+                          <i class="icofont-logout"></i> Logout
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div class="brand-logo">
+            <a href="index.html"><img src="./images/sicon.png" alt="" /> </a>
+          </div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="index.html" data-toggle="tooltip" data-placement="right" title="Home">
+                  <span><i class="icofont-ui-home"></i></span>
+                </a>
+              </li>
+
+              <li>
+                <a href="price.html" data-toggle="tooltip" data-placement="right" title="Price">
+                  <span><i class="icofont-price"></i></span>
+                </a>
+              </li>
+
+              <li>
+                <a href="news.html" data-toggle="tooltip" data-placement="right" title="NEWS">
+                  <span><i class="icofont-news"></i></span>
+                </a>
+              </li>
+              <li class="logout">
+                <a href="signin.html" data-toggle="tooltip" data-placement="right" title="Signout">
+                  <span><i class="icofont-power"></i></span>
+                </a>
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+
+        <div class="content-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-xxl-12 col-xl-08">
+                <div class="card">
+                  <div class="card-body">
+
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                      <div class="tradingview-widget-container__widget"></div>
+                      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
+                          rel="noopener nofollow" target="_blank"></a></div>
+                      <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                          {
+                            "symbol": "WMT",
+                              "width": "100%",
+                                "isTransparent": false,
+                                  "colorTheme": "light",
+                                    "locale": "en"
+                          }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+
+                    <div style="height: 600px; overflow: auto">
+                      <!-- TradingView Widget BEGIN -->
+                      <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
+                            rel="noopener nofollow" target="_blank"></a></div>
+                        <script type="text/javascript"
+                          src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                              "width": "1250",
+                                "height": "610",
+                                  "symbol": "NYSE:WMT",
+                                    "interval": "D",
+                                      "timezone": "Etc/UTC",
+                                        "theme": "light",
+                                          "style": "1",
+                                            "locale": "en",
+                                              "enable_publishing": false,
+                                                "save_image": false,
+                                                  "calendar": false,
+                                                    "hide_volume": true,
+                                                      "support_host": "https://www.tradingview.com"
+                            }
+                          </script>
+                      </div>
+                    </div>
+
+                    <!-- onclick="data = postData()" -->
+
+
+
+                    <div class="chart-content text-center">
+                      <div class="row">
+
+                      </div>
+                    </div>
+                    <div style="padding-top: 20px;"></div>
+                    <div class="text-center">
+                      <button id="myButton" type="button" class="btn btn-primary">Predict</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+              <div id="curve_chart"></div>
+
+              <div style="padding-top: 10px;"></div>
+              <div class="text-center">
+                <button id="mybutton" onclick="displayNextDayValue()" class="btn btn-primary">Next Day</button>
+                <div id="innerdiv"></div>
+
+              </div>
+            </div>
+
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+                  target="_blank"></a></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                  {
+                    "interval": "1D",
+                      "width": "450",
+                        "isTransparent": false,
+                          "height": "450",
+                            "symbol": "NYSE:WMT",
+                              "showIntervalTabs": true,
+                                "displayMode": "single",
+                                  "locale": "en",
+                                    "colorTheme": "light"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+                  target="_blank"></a></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-profile.js" async>
+                  {
+                    "width": "860",
+                      "height": "450",
+                        "isTransparent": false,
+                          "colorTheme": "light",
+                            "symbol": "NYSE:WMT",
+                              "locale": "en"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+
+
+  <script src="./vendor/jquery/jquery.min.js"></script>
+  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./vendor/apexchart/apexcharts.min.js"></script>
+  <script src="./js/plugins/pric-btc.js"></script>
+  <script>
+    const url = "";
+
+    // let dataToSend = {
+    //     tickerSymbol: "WMT" // Example, adjust as needed
+    //   };
+
+    var data1 = { tickerSymbol: "WMT" }
+
+    async function postData(url = "http://127.0.0.1:5000/api/predict", data = data1) {
+      method: "POST"
+      // Define headers with Content-Type set to application/json
+      const headers = {
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': '*',
+      };
+
+
+      // const data = {
+      //   stringData, // Adjust property name if needed
+      // };
+
+
+      try {
+        // Send the POST request with JSON data and parse the response
+        const response = await fetch(url, {
+          method: "POST",
+          headers,
+          body: JSON.stringify(data),
+        });
+
+        // Check for successful response
+
+
+        if (!response.ok) {
+          throw new Error(`API request failed with status ${response.status}`);
+        }
+
+        const responseData = await response.json();
+        console.log(responseData);
+
+        google.charts.setOnLoadCallback(drawChart(responseData));
+        // Return the stored response data
+        return responseData;
+      } catch (error) {
+        console.error("Error sending POST request:", error);
+        throw error; // Re-throw the error to allow caller to handle itwdw
+      }
+
+
+
+    }
+    // Load the Google Charts library
+    google.charts.load('current', { 'packages': ['corechart'] }); console.log("charts loaded");
+    //  google.charts.setOnLoadCallback(drawChart);
+
+
+    function getPastDates(days) {
+      const today = new Date(); // Get today's date
+
+      // Create an empty array to store dates
+      const dates = [];
+
+      // Loop backwards for the specified number of days
+      for (let i = 0; i < days; i++) {
+        // Create a new date object for each day in the past
+        const pastDate = new Date(today.getTime() - (i * 24 * 60 * 60 * 1000));
+
+        // Add the formatted date to the array (format as desired)
+        dates.push(pastDate.toLocaleDateString()); // Example formatting
+      }
+      dates.reverse();
+
+      // Return the array of past dates
+      return dates;
+    }
+
+
+
+    async function drawChart(responseData) {
+
+      let actualValues = responseData.map(item => item.Actual);
+      let predictedValues = responseData.map(item => item.Predicted);
+      let date = getPastDates(responseData.length);
+      console.log(actualValues, predictedValues);
+
+
+      var chartData = google.visualization.arrayToDataTable([
+        ['Date', 'Actual', 'Predicted'],
+        ...responseData.map((item, index) => {
+          return [date[index], actualValues[index], predictedValues[index]];
+        })
+      ]);
+
+
+
+      console.log(chartData);
+
+
+
+      // Chart configuration options
+      var options = {
+        curveType: 'function',
+        title: 'Actual vs. Predicted Values',
+        hAxis: { title: 'Dates' },
+        vAxis: { title: 'Value' }, // No need for format as numbers are used
+        series: { 0: { color: 'blue' }, 1: { color: 'red' } }, // Set line colors
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+      // Function to enable the button and display the chart
+
+
+
+
+
+      chart.draw(chartData, options);
+    }
+
+    const button = document.getElementById("myButton");
+    button.onclick = function () {
+      postData();
+      // Now postData is defined
+      let graph1 = document.getElementById("curve_chart");
+      graph1.style["width"] = "1850px";
+      graph1.style["height"] = "700px";
+
+      let next_day_price = document.getElementById("next_day");
+      next_day_price = 172.54004
+
+      return next_day_price;
+
+
+
+
+      // style="width: 1850px; height: 700px"
+    };
+
+
+
+  </script>
+  <script src="./js/scripts.js"></script>
+  <script></script>
+</body>
+
+</html>
+
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+      target="_blank"></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+    async>
+      {
+        "interval": "1D",
+          "width": "450",
+            "isTransparent": false,
+              "height": "450",
+                "symbol": "NYSE:WMT",
+                  "showIntervalTabs": true,
+                    "displayMode": "single",
+                      "locale": "en",
+                        "colorTheme": "light"
+      }
+    </script>
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+        target="_blank"></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-profile.js"
+      async>
+        {
+          "width": "860",
+            "height": "450",
+              "isTransparent": false,
+                "colorTheme": "light",
+                  "symbol": "NYSE:WMT",
+                    "locale": "en"
+        }
+      </script>
+  </div>
+  <!-- TradingView Widget END -->
+</div>
+<!-- TradingView Widget END -->
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./vendor/apexchart/apexcharts.min.js"></script>
+<script src="./js/plugins/pric-btc.js"></script>
+<script>
+  const url = "";
+
+  // let dataToSend = {
+  //     tickerSymbol: "AAPL" // Example, adjust as needed
+  //   };
+
+  var data1 = { tickerSymbol: "WMT" }
+
+  async function postData(url = "http://127.0.0.1:5000/api/predict", data = data1) {
+    method: "POST"
+    // Define headers with Content-Type set to application/json
+    const headers = {
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': '*',
+    };
+
+
+    // const data = {
+    //   stringData, // Adjust property name if needed
+    // };
+
+
+    try {
+      // Send the POST request with JSON data and parse the response
+      const response = await fetch(url, {
+        method: "POST",
+        headers,
+        body: JSON.stringify(data),
+      });
+
+      // Check for successful response
+
+
+      if (!response.ok) {
+        throw new Error(`API request failed with status ${response.status}`);
+      }
+
+      const responseData = await response.json();
+      console.log(responseData);
+
+      google.charts.setOnLoadCallback(drawChart(responseData));
+      // Return the stored response data
+      return responseData;
+    } catch (error) {
+      console.error("Error sending POST request:", error);
+      throw error; // Re-throw the error to allow caller to handle itwdw
+    }
+
+
+
+  }
+  // Load the Google Charts library
+  google.charts.load('current', { 'packages': ['corechart'] }); console.log("charts loaded");
+  //  google.charts.setOnLoadCallback(drawChart);
+
+
+  function getPastDates(days) {
+    const today = new Date(); // Get today's date
+
+    // Create an empty array to store dates
+    const dates = [];
+
+    // Loop backwards for the specified number of days
+    for (let i = 0; i < days; i++) {
+      // Create a new date object for each day in the past
+      const pastDate = new Date(today.getTime() - (i * 24 * 60 * 60 * 1000));
+
+      // Add the formatted date to the array (format as desired)
+      dates.push(pastDate.toLocaleDateString()); // Example formatting
+    }
+    dates.reverse();
+
+    // Return the array of past dates
+    return dates;
+  }
+
+
+
+  async function drawChart(responseData) {
+
+    let actualValues = responseData.map(item => item.Actual);
+    let predictedValues = responseData.map(item => item.Predicted);
+    let date = getPastDates(responseData.length);
+    console.log(actualValues, predictedValues);
+
+
+    var chartData = google.visualization.arrayToDataTable([
+      ['Date', 'Actual', 'Predicted'],
+      ...responseData.map((item, index) => {
+        return [date[index], actualValues[index], predictedValues[index]];
+      })
+    ]);
+
+
+
+    console.log(chartData);
+
+
+
+    // Chart configuration options
+    var options = {
+      curveType: 'function',
+      title: 'Actual vs. Predicted Values',
+      hAxis: { title: 'Dates' },
+      vAxis: { title: 'Value' }, // No need for format as numbers are used
+      series: { 0: { color: 'blue' }, 1: { color: 'red' } }, // Set line colors
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+    // Function to enable the button and display the chart
+
+
+
+
+
+    chart.draw(chartData, options);
+  }
+
+  const button = document.getElementById("myButton");
+  button.onclick = function () {
+    postData();
+    // Now postData is defined
+    let graph1 = document.getElementById("curve_chart");
+    graph1.style["width"] = "1250px";
+    graph1.style["height"] = "700px";
+
+
+
+
+    // style="width: 1850px; height: 700px"
+  };
+
+
+
+</script>
+<script src="./js/scripts.js"></script>
+<script></script>
+</body>
+
+</html>

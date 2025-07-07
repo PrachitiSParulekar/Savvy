@@ -1,0 +1,14 @@
+{
+  "name": "savvy-frontend",
+  "version": "1.0.0",
+  "description": "SAVVY Stock Market Dashboard Frontend - Real-time stock data and market insights",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.0-alpha2",
+    "jquery": "^3.5.1"
+  }
+}

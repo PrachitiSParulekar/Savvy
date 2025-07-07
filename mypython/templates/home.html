@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVVY - Stock Dashboard API</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .endpoint { background: #f4f4f4; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        code { background: #e8e8e8; padding: 2px 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 SAVVY Stock Dashboard API</h1>
+        <p>Welcome to the SAVVY Stock Dashboard Platform - Real-time stock data and market insights</p>
+        
+        <h2>📊 Available Endpoints</h2>
+        
+        <div class="endpoint">
+            <h3>Single Stock Data</h3>
+            <p><code>GET /api/stock/{ticker}</code></p>
+            <p>Example: <code>/api/stock/AAPL?period=1mo&interval=1d</code></p>
+        </div>
+        
+        <div class="endpoint">
+            <h3>Multiple Stocks</h3>
+            <p><code>POST /api/stocks/multiple</code></p>
+            <p>Body: <code>{"tickers": ["AAPL", "MSFT", "GOOGL"]}</code></p>
+        </div>
+        
+        <div class="endpoint">
+            <h3>Health Check</h3>
+            <p><code>GET /api/health</code></p>
+        </div>
+        
+        <h2>🎯 Frontend Dashboard</h2>
+        <p>Access the full dashboard at: <a href="../package/qash/src/index.html">Dashboard Interface</a></p>
+        
+        <p><em>API is ready to serve real-time stock market data!</em></p>
+    </div>
+</body>
+</html>

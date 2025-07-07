@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Savvy - Unlock the future of stock</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/sicon.png" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="./vendor/slick/slick.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="./vendor/slick/slick-theme.css" /> -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+
+
+  <div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+
+
+  <div id="main-wrapper">
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-12">
+            <div class="header-content">
+              <div class="header-left">
+                <div class="brand-logo">
+                  <a href="index.html">
+                    <img src="./images/sicon.png" alt="" />
+                    <span>SAVVY</span>
+                  </a>
+                </div>
+                
+
+              </div>
+              
+
+              <div class="header-right">
+                <div class="dark-light-toggle" onclick="themeToggle()">
+                  <span class="dark"><i class="icofont-moon"></i></span>
+                  <span class="light"><i class="icofont-sun-alt"></i></span>
+                </div>
+                <div class="notification dropdown">
+                  <div class="notify-bell" data-toggle="dropdown">
+                    <span><i class="icofont-alarm"></i></span>
+                  </div>
+
+                <div class="dropdown-menu dropdown-menu-right notification-list">
+                  <h4>Announcements</h4>
+                  <div class="lists">
+
+
+
+
+
+                    <a href="./settings-activity.html">More <i class="icofont-simple-right"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile_log dropdown">
+                <div class="user" data-toggle="dropdown">
+                  <span class="thumb"><img src="./images/sicon.png" alt="" /></span>
+                  <span class="arrow"><i class="icofont-angle-down"></i></span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right">
+
+
+                  <div class="user-balance">
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <div class="tape">
+
+    </div>
+
+
+    <div class="sidebar">
+      <div class="brand-logo">
+        <a href="index.html"><img src="./images/sicon.png" alt="" /> </a>
+      </div>
+      <div class="menu">
+        <ul>
+
+          <li>
+            <a href="index.html" data-toggle="tooltip" data-placement="right" title="Home">
+              <span><i class="icofont-ui-home"></i></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="price.html" data-toggle="tooltip" data-placement="right" title="Price">
+              <span><i class="icofont-price"></i></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="news.html" data-toggle="tooltip" data-placement="right" title="NEWS">
+              <span><i class="icofont-news"></i></span>
+            </a>
+          </li>
+
+
+          <li class="logout">
+            <a href="signin.html" data-toggle="tooltip" data-placement="right" title="Signout">
+              <span><i class="icofont-power"></i></span>
+            </a>
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+    <div class="content-body">
+      <div class="container">
+        <div class="row">
+
+
+          <!-- TradingView Widget BEGIN -->
+          <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+<script type="text/javascript">
+  new TradingView.widget({
+    "container_id": "tradingview-widget-container__widget",
+    "symbols": [
+      {
+        "description": "",
+        "proName": "NASDAQ:AAPL"
+      },
+      {
+        "description": "",
+        "proName": "NASDAQ:NVDA"
+      },
+      {
+        "description": "",
+        "proName": "NASDAQ:MSFT"
+      },
+      {
+        "description": "",
+        "proName": "NASDAQ:INTC"
+      },
+      {
+        "description": "",
+        "proName": "NYSE:DIS"
+      },
+      {
+        "description": "",
+        "proName": "NYSE:JPM"
+      },
+      {
+        "description": "",
+        "proName": "NYSE:TSM"
+      }
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "colorTheme": "light",
+    "locale": "en"
+  });
+</script>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
+</div>
+<!-- TradingView Widget END -->
+
+
+          <div class="col-xxl-4 col-xl-4 col-lg-6">
+            <div class="price-widget bg-btc">
+              <a href="price-details-AAPL.html">
+                <div class="price-content">
+                  <div class="icon-title">
+                    <i class="icofont-brand-apple"></i>
+                    <span>APPLE</span>
+                  </div>
+
+                </div>
+                <div id="chart"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-xl-4 col-lg-6">
+            <div class="price-widget bg-eth">
+              <a href="price-details-MSFT.html">
+                <div class="price-content">
+                  <div class="icon-title">
+                    <i class="icofont-brand-microsoft"></i>
+                    <span>Microsoft</span>
+                  </div>
+
+                </div>
+                <div id="chart2"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-xl-4 col-lg-6">
+            <div class="price-widget bg-usdt">
+              <a href="price-details-INTC.html">
+                <div class="price-content">
+                  <div class="icon-title">
+                    <i class="icofont-brand-intel"></i>
+                    <span>INTEL</span>
+                  </div>
+
+                </div>
+                <div id="chart3"></div>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="col-xxl-12 col-xl-8">
+            <div class="card dashboard-select">
+              <div class="card-header">
+
+                <div style="height: 600px; overflow: auto">
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
+                        rel="noopener nofollow" target="_blank"></a></div>
+                    <script type="text/javascript">
+                      new TradingView.widget({
+                        "width": "1250",
+                        "height": "610",
+                        "symbol": "NASDAQ:AAPL",
+                        "interval": "D",
+                        "timezone": "Etc/UTC",
+                        "theme": "light",
+                        "style": "1",
+                        "locale": "en",
+                        "enable_publishing": false,
+                        "save_image": false,
+                        "calendar": false,
+                        "hide_volume": true,
+                        "support_host": "https://www.tradingview.com"
+                      });
+                    </script>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          
+<div> <rssapp-imageboard id="tZONVyKxHyrs2TsS"></rssapp-imageboard><script src="https://widget.rss.app/v1/imageboard.js" type="text/javascript" async></script></div>
+</div>
+         
+         
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./vendor/basic-table/jquery.basictable.min.js"></script>
+    <script src="./js/plugins/basic-table-init.js"></script>
+
+    <script src="./vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="./js/plugins/perfect-scrollbar-init.js"></script>
+
+    <script src="./vendor/apexchart/apexcharts.min.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/plugins/apex-price.js"></script>
+
+    <script src="./vendor/slick/slick.min.js"></script>
+    <script src="./js/plugins/slick-init.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
